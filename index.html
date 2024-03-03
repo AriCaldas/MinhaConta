@@ -5,22 +5,48 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Minha Conta</title>
         <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
     </head>
     <body>
-        <header>
-            <h1>Minha Conta</h1>
-            <h2>Gestão de despesas do mês</h2>
-        </header>
+        <div id="wrapper">
+            <header>
+                <h1>Minha Conta</h1>
+                <h2>Gestão de despesas do mês</h2>
+            </header>
 
-        <main>
-            <section>
-                <button>+</button>
-                <p>Adicione uma nova conta do mês</p>
-            </section>
-        </main>
+            <main>
+                <section>
+                    <button id="botaoMais">+</button>
+                    <p>Adicione uma nova conta do mês</p>
+                </section>
 
-        <footer>
-            <p>&copy;MinhaConta, desnvolvido por Ari Caldas: <a href="https://github.com/AriCaldas/MinhaConta">Confira o reposítório GitHub</a></p>
-        </footer>
+                <div id="modal">
+                    <div id="modalForm">
+                        <form action="" id="form">
+                            <label for="nomeConta">   
+                                <input type="text" id="nomeConta" placeholder="Nome da conta">
+                            </label>
+                            <label for="valorConta">    
+                               <input type="text" id="valorConta" placeholder="Valor R$">
+                            </label>
+                            <label for="vencimentoConta">    
+                               <input type="text" id="vencimentoConta" placeholder="Vencimento">
+                            </label>
+                            <label for="situacaoConta">    
+                                Pago <input type="checkbox" id="situacaoConta">
+                            </label>
+                        </form>
+                    </div>
+                </div>
+
+                <section id="contasContainer">
+                    <!-- <div class="contas">Luz</div> -->
+                </section>
+            </main>
+
+            <footer>
+                <p>&copy;MinhaConta, desnvolvido por Ari Caldas: <a href="https://github.com/AriCaldas/MinhaConta">Confira o reposítório GitHub</a></p>
+            </footer>
+        </div>
     </body>
 </html>
