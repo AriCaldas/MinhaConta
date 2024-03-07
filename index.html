@@ -8,7 +8,8 @@
         <script src="script.js" defer></script>
     </head>
     <body>
-        <div id="wrapper">
+        <button class="darkMode">Modo Escuro</button>
+        <div class="wrapper">
             <header>
                 <h1>Minha Conta</h1>
                 <h2>Gestão de despesas do mês</h2>
@@ -16,30 +17,44 @@
 
             <main>
                 <section>
-                    <button id="botaoMais">+</button>
+                    <button class="botaoMais">+</button>
                     <p>Adicione uma nova conta do mês</p>
                 </section>
 
-                <div id="modal">
-                    <div id="modalForm">
-                        <form action="" id="form">
-                            <label for="nomeConta">   
-                                <input type="text" id="nomeConta" placeholder="Nome da conta">
+                <!--class="modal"-->
+                <div class="modal">
+                    <!--class="modalForm"-->
+                    <div class="modalForm">
+                        <!--class="form"-->
+                        <form action="" class="form">
+                            <label for="nomeConta">
+                                   <!--class="nomeConta"-->
+                                <input type="text" id="nomeConta" class="nomeConta" placeholder="Nome da conta">
                             </label>
-                            <label for="valorConta">    
-                               <input type="text" id="valorConta" placeholder="Valor R$">
+                            <label for="valorConta">
+                                    <!--class="valorConta"-->
+                               <input type="text" id="valorConta" class="valorConta" placeholder="Valor R$">
                             </label>
-                            <label for="vencimentoConta">    
-                               <input type="text" id="vencimentoConta" placeholder="Vencimento">
+                            <label for="vencimentoConta">
+                                    <!--class="vencimentoConta"-->
+                               <input type="text" id="vencimentoConta" class="vencimentoConta" placeholder="Vencimento 00/00/00">
                             </label>
-                            <label for="situacaoConta">    
-                                Pago <input type="checkbox" id="situacaoConta">
+                            <!--class="labelSituacao"-->
+                            <label for="situacaoConta" class="labelSituacao">    
+                                Pago <input type="checkbox" id="situacaoConta" class="situacaoConta">
                             </label>
+                            <!--class="buttons"-->
+                            <div class="buttons">
+                                <!--class="btnAdicionar"-->
+                                <button class="btnAdicionar">Adicionar</button>
+                                <!--class="btnCancelar"-->
+                                <button class="btnCancelar">Cancelar</button>
+                            </div>
                         </form>
                     </div>
                 </div>
 
-                <section id="contasContainer">
+                <section class="contasContainer">
                     <!-- <div class="contas">Luz</div> -->
                 </section>
             </main>
