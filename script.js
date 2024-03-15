@@ -6,8 +6,8 @@ let contasContainer = document.querySelector(".contasContainer");
 
 function darkMode(){
     let body = document.body;
-    let contasLight = document.querySelector(".contasLight");
-    let contasDark = document.querySelector(".contasDark");
+    let contasLight = document.querySelectorAll(".contasLight");
+    let contasDark = document.querySelectorAll(".contasDark");
     let darkBtn = document.querySelector(".darkMode");
 
     if(dark == false){
@@ -17,8 +17,10 @@ function darkMode(){
         body.style.color = "#fff";
         if(contasLight){
             console.log(contasLight);
-            contasLight.classList.remove("contasLight");
-            contasLight.classList.add("contasDark");
+            contasLight.forEach(conta => {
+                conta.classList.remove("contasLight");
+                conta.classList.add("contasDark");
+            })
         }
         dark = true;
         console.log(dark);
@@ -28,11 +30,14 @@ function darkMode(){
         body.style.backgroundColor = "#fff";
         body.style.color = "#000";
         if(contasDark){
-            console.log("contasDark");
-            contasDark.classList.remove("contasDark");
-            contasDark.classList.add("contasLight");
+            console.log(contasDark);
+            contasDark.forEach(conta => {
+                conta.classList.remove("contasDark");
+                conta.classList.add("contasLight");
+            })
         }
         dark = false;
+        console.log(dark);
     }
 }
 
@@ -63,7 +68,7 @@ function adicionar(e){
     }else{
         if(dark == false){
             novaConta.classList.add("contasLight");
-            novaConta.innerHTML = `<p>${nomeConta.value}</p>`;
+            novaConta.innerHTML = `<p><a href="conta-info.html">${nomeConta.value}</a></p>`;
             contasContainer.appendChild(novaConta);
             fieldReset();
             cancelar();
@@ -84,12 +89,12 @@ function fieldReset(){
      contasContainer.value = "";
 }
 
-// function mostrarDados(){
+function mostrarDados(){
     
-// }
+}
 
 document.querySelector(".botaoMais").addEventListener("click", chamarModal);
 document.querySelector(".btnCancelar").addEventListener("click", cancelar);
 document.querySelector(".btnAdicionar").addEventListener("click", adicionar);
 document.querySelector(".darkMode").addEventListener("click", darkMode);
-// document.querySelector(".contas").addEventListener("click", mostrardados);
+document.querySelectorAll(".contasLight").addEventListener("click", mostrarDados);
