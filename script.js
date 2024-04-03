@@ -4,6 +4,9 @@ let valorConta = document.querySelector(".valorConta");
 let vencimentoConta = document.querySelector(".vencimentoConta");
 let contasContainer = document.querySelector(".contasContainer");
 let situacaoConta = document.querySelector(".situacaoConta");
+let modalForm = document.querySelector("#modalForm");
+let modal = document.querySelector(".modal");
+
 
 function darkMode(){
     let body = document.body;
@@ -16,6 +19,7 @@ function darkMode(){
         darkBtn.style.color = "#000";
         body.style.backgroundColor = "#000";
         body.style.color = "#fff";
+        modalForm.style.color = "#000";
         if(contasLight){
             console.log(contasLight);
             contasLight.forEach(conta => {
@@ -30,6 +34,7 @@ function darkMode(){
         darkBtn.style.color = "#fff";
         body.style.backgroundColor = "#fff";
         body.style.color = "#000";
+        modalForm.style.color = "#000";
         if(contasDark){
             console.log(contasDark);
             contasDark.forEach(conta => {
@@ -51,9 +56,8 @@ function chamarModal(){
     // modal.classList.add("modal");
 }
 
-function cancelar(){
-    let modal = document.querySelector(".modal");
-
+function cancelar(e){
+    e.preventDefault();
     modal.style.opacity = 0;  
     modal.style.zIndex = -1;
 }
