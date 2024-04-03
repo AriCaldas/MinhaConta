@@ -3,6 +3,7 @@ let nomeConta = document.querySelector(".nomeConta");
 let valorConta = document.querySelector(".valorConta");
 let vencimentoConta = document.querySelector(".vencimentoConta");
 let contasContainer = document.querySelector(".contasContainer");
+let situacaoConta = document.querySelector(".situacaoConta");
 
 function darkMode(){
     let body = document.body;
@@ -90,7 +91,14 @@ function fieldReset(){
 }
 
 function mostrarDados(){
-    
+    infoBody = document.body;
+
+    infoBody.innerHTML = `<h1>Conta de Luz</h1>
+                          <p>Descrição: ${nomeConta.value}</p>
+                          <p>Valor: ${valorConta.value}<p/>
+                          <p>Data de vencimento: ${vencimentoConta.value}<p/>
+                          <p>Situação: ${situacaoConta.value}<p/>
+    `
 }
 
 document.querySelector(".botaoMais").addEventListener("click", chamarModal);
@@ -98,3 +106,4 @@ document.querySelector(".btnCancelar").addEventListener("click", cancelar);
 document.querySelector(".btnAdicionar").addEventListener("click", adicionar);
 document.querySelector(".darkMode").addEventListener("click", darkMode);
 document.querySelectorAll(".contasLight").addEventListener("click", mostrarDados);
+document.querySelectorAll(".contasDark").addEventListener("click", mostrarDados);
