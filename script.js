@@ -48,16 +48,15 @@ function darkMode(){
 }
 
 function chamarModal(){
-    let modal = document.querySelector(".modal");
-
     modal.style.opacity = 1;  
     modal.style.zIndex = 1;
+    modalForm.style.position = "absolute";
     // modalForm.classList.add("modalForm");
     // modal.classList.add("modal");
 }
 
-function cancelar(e){
-    e.preventDefault();
+function cancelar(){
+    console.log("Cancelou");
     modal.style.opacity = 0;  
     modal.style.zIndex = -1;
 }
