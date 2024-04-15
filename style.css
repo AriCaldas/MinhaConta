@@ -34,12 +34,25 @@ section{
     text-align: center;
 }
 
+.botaoMais{
+    border: 1px solid lightgrey;
+}
+
 button{
     border-radius: 50%;
     height: 50px;
     width: 50px;
     font-size: 2rem;
     cursor: pointer;
+    outline: none;
+    border: 1px solid rgb(237, 237, 237);
+    color: grey;
+    transition: .5s;
+}
+
+button:hover{
+    background-color: rgb(143, 143, 143);
+    color: white;
 }
 
 .modal{
@@ -78,6 +91,10 @@ button{
     transition: .5s;
 }
 
+label{
+    color: grey;
+}
+
 input{
     border-radius: 20px;
     width: 250px;
@@ -85,11 +102,24 @@ input{
     text-align: center;
     font-size: 20px;
     transition: .5s;
+    outline: none;
+    border: 1px solid;
+    border: 1px solid rgb(237, 237, 237);
+    background-color: buttonFace;
+}
+
+input:hover{
+    background-color: rgb(143, 143, 143);
+    color: white;
 }
 
 input[type="checkbox"]{
     cursor: pointer;
     width: 15px;
+}
+
+.pago{
+    font-style: italic;
 }
 
 input::placeholder{
